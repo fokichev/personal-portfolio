@@ -22,6 +22,19 @@ body{
   color: white;
 }
 
+#construction h1{
+  font-size: 8vh;
+
+}
+
+#construction h2{
+  font-size: 4vh;
+}
+
+#construction h3{
+  font-size: 3vh;
+}
+
 .social-link{
   width: 7vh;
   margin: 1vh;
