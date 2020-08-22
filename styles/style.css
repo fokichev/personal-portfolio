@@ -1,3 +1,37 @@
 body{
-  
+  background: url(../images/bg-beach.png);
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@font-face {
+    font-family: zillaslab;
+    src: url(fonts/ZillaSlab/ZillaSlab-Light.ttf);
+}
+
+#construction{
+  top: 340px;
+  position: relative;
+  text-align: center;
+  font-family: zillaslab;
+}
+
+#construction a{
+  color: white;
+}
+
+.social-link{
+  width: 7vh;
+  margin: 1vh;
+}
+
+@media only screen and (max-width: 1326px) {
+  body {
+    background-size: auto 100vh;
+  }
+  #construction{
+    top: 300px;
+  }
 }
