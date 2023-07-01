@@ -1,5 +1,6 @@
 import "../styles/Navbar.scss";
 import { ReactComponent as MenuIcon } from "../assets/icons/bars-solid.svg";
+import { ReactComponent as ContactIcon } from "../assets/icons/envelope-solid.svg";
 
 const NAV_MAP = [
     { key: "about", text: "About" },
@@ -27,6 +28,11 @@ const Navbar = (props: NavbarProps) => {
                 <b>{desktop ? "Fokicheva" : "F"}</b>
             </span>
             {
+                !desktop && (
+                    <ContactIcon className="contact-icon" />
+                )
+            }
+            {
                 desktop && (
                     <div className="menu">
                         {
@@ -44,8 +50,7 @@ const Navbar = (props: NavbarProps) => {
             }
             {
                 !desktop && (
-                    // <img src={MenuIcon} className="menu-icon"/>
-                    <MenuIcon />
+                    <MenuIcon className="menu-icon"/>
                 )
             }
 

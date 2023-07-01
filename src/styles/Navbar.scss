@@ -6,13 +6,24 @@
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
     font-family: Rubik, Inter, system-ui, Helvetica, Arial, sans-serif;
+
+	// mobile
+	padding: 11px 19px;
+	
+	// tablet
+	@media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+		padding: 16px 34px;
+	}
+	
+	// desktop
+	@media only screen and (min-width: const.$desktop-min) {
+		padding: 10px;
+	}
 }
 
 .logo {
 	cursor: pointer;
-    font-size: 32px;
 
 	b {
 		transition: 0.1s all ease-in;
@@ -22,6 +33,14 @@
 			color: const.$red;
 		}
 	}
+
+	// mobile
+    font-size: 37px;
+	// desktop
+	@media only screen and (min-width: const.$desktop-min) {
+		font-size: 32px;
+	}
+
 }
 
 .menu {
@@ -51,8 +70,26 @@
 
 }
 
-.menu-icon g{
-	fill: const.$white;
+.menu-icon{
+	// mobile
+	width: 27px;
+	// total x needs to be 45px=w+m*2 => m=(45-w)/2
+	margin: 0 9px;
+
+	// tablet
+	@media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+		width: 39px;
+		height: 44px;
+		margin: 0 3px;
+	}
+}
+
+.contact-icon {
+	width: 34px;
+	color: const.$white;
+	padding: 10px;
+	border: 5px solid const.$red;
+	border-radius: 14px;
 }
 
 /* .logo {
