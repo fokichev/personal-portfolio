@@ -1,6 +1,8 @@
 import "../styles/Navbar.scss";
+
 import { ReactComponent as MenuIcon } from "../assets/icons/bars-solid.svg";
 import { ReactComponent as ContactIcon } from "../assets/icons/envelope-solid.svg";
+import { OrientationType } from "../types";
 
 const NAV_MAP = [
     { key: "about", text: "About" },
@@ -59,11 +61,7 @@ const Navbar = (props: NavbarProps) => {
 }
 
 interface NavbarProps {
-    orientation: {
-        mobile: Boolean,
-        tablet: Boolean,
-        desktop: Boolean
-    }
+    orientation: OrientationType
 }
 
 export default Navbar

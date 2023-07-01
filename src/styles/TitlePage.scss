@@ -1,0 +1,103 @@
+@use 'constants' as const;
+
+.title-page {
+    font-family: Rubik, Inter, system-ui, Helvetica, Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    // mobile
+    align-items: center;
+
+    // tablet & desktop
+	@media only screen and (min-width: const.$mobile) {
+        align-items: start;
+	}
+}
+
+h1 {
+    font-weight: 300;
+
+    // mobile
+    font-size: 52px;
+    margin: 180px 52px 0 52px;
+    
+    // tablet
+	@media only screen and (min-width: const.$mobile) {
+        font-size: 93px;
+        margin: 300px 73px 0 73px;
+	}
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        font-size: 85px;
+        margin: 150px 200px 0 200px;
+	}
+}
+
+h3 {
+    font-weight: 300;
+
+    // mobile
+    font-size: 24px;
+    margin: 40px 52px;
+
+    // tablet
+	@media only screen and (min-width: const.$mobile) {
+        font-size: 36px;
+        margin: 46px 73px 0 73px;
+	}
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        font-size: 32px;
+        margin: 32px 200px 0 200px;
+    }
+}
+
+.accent {
+    color: const.$red;
+    
+}
+
+.contact-button {
+    font-weight: 300;
+    background-color: const.$red;
+
+    margin: 10px 52px 80px 52px;
+
+	border: 1px solid transparent;
+    border-radius: 16px;
+
+    // mobile
+    width: 175px;
+    padding: 13px 15px;
+    font-size: 24px;
+
+    // tablet
+	@media only screen and (min-width: const.$mobile) {
+        width: 200px;
+        padding: 16px 18px;
+        font-size: 27px;
+        margin: 52px 73px 150px 73px;
+	}
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        margin: 40px 200px 110px 200px;
+    }
+}
+
+.bottom-scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 130px;
+    background-color: const.$grey;
+
+    // tablet & desktop
+	@media only screen and (min-width: const.$mobile) {
+        min-height: 200px;
+	}
+}

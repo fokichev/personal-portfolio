@@ -22,8 +22,8 @@ const App = () => {
 		<>
 			<div className="flex-col">
 				<Navbar orientation={orientation}/>
-				{/* <TitlePage orientation={orientation}/>
-				<AboutMe orientation={orientation}/> */}
+				<TitlePage orientation={orientation}/>
+				{/* <AboutMe orientation={orientation}/> */}
 			</div>
 			
 

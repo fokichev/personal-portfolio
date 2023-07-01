@@ -17,7 +17,7 @@
 	}
 	
 	// desktop
-	@media only screen and (min-width: const.$desktop-min) {
+	@media only screen and (min-width: const.$tablet) {
 		padding: 10px;
 	}
 }
@@ -37,7 +37,7 @@
 	// mobile
     font-size: 37px;
 	// desktop
-	@media only screen and (min-width: const.$desktop-min) {
+	@media only screen and (min-width: const.$tablet) {
 		font-size: 32px;
 	}
 
