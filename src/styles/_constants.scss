@@ -1,0 +1,18 @@
+// Breakpoints
+$mobile: 640px;
+$tablet: 1040px;
+$desktop-min: 1041px;
+
+// Colors
+$black: #000000;
+$navy: #1B1D21;
+$lightnavy: #424750;
+$white: #FFFFFF;
+$grey: #D7D7D7;
+$red: #F85F5F;
+
+// Fonts
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}

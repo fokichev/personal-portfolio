@@ -1,35 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+import Navbar from './components/Navbar';
+import TitlePage from './pages/TitlePage';
+import AboutMe from './pages/AboutMe';
+import './styles/App.scss'
+import useMediaQuery from './hooks/useMediaQuery';
 
-function App() {
-  const [count, setCount] = useState(0)
+const MOBILE_WIDTH = 640;
+const TABLET_WIDTH = 1040;
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+const App = () => {
+//   const [count, setCount] = useState(0)
+	const mobile = useMediaQuery(`(max-width: ${MOBILE_WIDTH}px)`);
+	const tablet = !mobile && useMediaQuery(`(max-width: ${TABLET_WIDTH}px)`);
+	const desktop = !(mobile || tablet);
+
+	const orientation = { mobile, tablet, desktop };
+
+	return (
+		<>
+			<div className="flex-col">
+				<Navbar orientation={orientation}/>
+				{/* <TitlePage orientation={orientation}/>
+				<AboutMe orientation={orientation}/> */}
+			</div>
+			
+
+		</>
+	)
 }
 
 export default App

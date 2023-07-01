@@ -1,0 +1,78 @@
+@use 'constants' as const;
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: Rubik, Inter, system-ui, Helvetica, Arial, sans-serif;
+}
+
+.logo {
+	cursor: pointer;
+    font-size: 32px;
+
+	b {
+		transition: 0.1s all ease-in;
+		color: const.$white;
+
+		&:hover {
+			color: const.$red;
+		}
+	}
+}
+
+.menu {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.menu-item {
+	cursor: pointer;
+	// 33 between = 19 + 14
+	padding: 12px 19px;
+	margin: 8px 14px;
+	transition: 0.1s all ease-in;
+
+	&.--outline {
+		border: 3px solid const.$red;
+		border-radius: 14px;
+
+		&:hover {
+			border-color: const.$white;	
+		}
+	}
+
+	&:hover {
+		color: const.$red;
+	}
+
+}
+
+.menu-icon g{
+	fill: const.$white;
+}
+
+/* .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
