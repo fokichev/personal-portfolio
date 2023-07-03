@@ -5,7 +5,6 @@ import { ReactComponent as DownIconDesktop } from "../assets/icons/down-desktop.
 
 import { OrientationType } from "../types";
 
-
 const TitlePage = (props: TitlePageProps) => {
     const {
         orientation
@@ -19,15 +18,18 @@ const TitlePage = (props: TitlePageProps) => {
 
     return (
         <div className="title-page">
-            <h1>
-                Hey, I'm <span className="accent"><b>Pol.</b></span>
-            </h1>
-            <h3>
-                I’m a <b>full stack developer</b>, experienced with building and maintaining web applications.
-            </h3>
-            <button className="contact-button">
-                Get in touch!
-            </button>
+            <div className="center-content title-page-top">
+                <h1>
+                    Hey, I'm <span className="accent"><b>Pol.</b></span>
+                </h1>
+                <h3>
+                    I’m a <b>full stack developer</b>, experienced with building and maintaining web applications.
+                </h3>
+                <button className="contact-button">
+                    Get in touch!
+                </button>
+            </div>
+            
             <div className="bottom-scroll">
                 { mobile ? <DownIconMobile /> : <DownIconDesktop/> }
             </div>
@@ -38,4 +40,5 @@ const TitlePage = (props: TitlePageProps) => {
 interface TitlePageProps {
     orientation: OrientationType
 }
+
 export default TitlePage;

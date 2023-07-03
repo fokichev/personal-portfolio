@@ -1,0 +1,217 @@
+@use 'constants' as const;
+
+.about-me {
+    display: flex;
+    background-color: const.$grey;
+    align-items: center;
+    color: const.$navy;
+    width: 100%;
+    flex-direction: column;
+
+    // mobile & tablet
+    font-size: 20px;
+
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+        font-size: 22px;
+	}
+
+}
+
+.about-me-top {
+    display: flex;
+
+    // mobile
+    flex-direction: column;
+    align-items: center;
+
+    // tablet
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        margin: 0 70px 60px 70px;
+        justify-content: space-between;
+	}
+
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+        // margin: 0 140px;
+        justify-content: space-between;
+	}
+
+    // tablet & desktop
+    @media only screen and (min-width: const.$mobile) {
+        flex-direction: row;
+    }
+}
+
+.about-me-right {
+    display: flex;
+    flex-direction: column;
+
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+		width: 46%
+	}
+}
+
+img {
+    // mobile
+    width: 265px;
+
+    // tablet
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        width: 46%
+    }
+
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+		width: 46%;
+        max-width: 600px;
+	}
+}
+
+.about-me-text-section {
+    display: flex;
+    flex-direction: column;
+
+    // mobile
+    align-items: center;
+
+    // tablet
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        width: 46%
+    }
+
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+		align-items: start;
+	}
+}
+
+h2 {
+    color: const.$red;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.about-me-text {
+    // mobile
+    margin: 0 38px 20px 38px;
+
+    // tablet & desktop
+    @media only screen and (min-width: const.$mobile) {// and (max-width: const.$tablet) {
+        margin: 0 0 40px 0;
+    }
+}
+
+.about-me-bottom {
+    display: flex;
+    background-color: rgba($color: const.$red, $alpha: 0.2);
+    justify-content: center;
+    width: fit-content;
+
+    margin-bottom: 70px;
+
+    // mobile
+    flex-direction: column;
+    width: calc(100% - 76px);
+
+    // tablet	
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 30px 0;
+        width: calc(100% - 140px);
+	}
+
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+        padding: 30px;
+		// width: 100%;
+        width: calc(100% - 60px);
+	}
+}
+
+.about-me-bottom-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-bottom-svgs {
+    display: flex;
+
+    // mobile
+    flex-direction: column;
+
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+		flex-direction: row;
+        align-items: end;
+	}
+}
+
+.about-me-row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    // mobile
+    font-size: 16px;
+    margin: 10px 25px;
+
+    &:first-of-type {
+        margin-top: 30px;
+    }
+
+    // tablet	
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        font-size: 18px;
+    }
+
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+        font-size: 22px;
+	}
+
+    // tablet & desktop
+    @media only screen and (min-width: const.$mobile) {
+        &:first-of-type {
+            margin-top: 10px;
+        }
+    }
+}
+
+.about-me-icon {
+    color: const.$red;
+
+    &.--location-dot {
+        width: 21px;
+        height: 30px;
+        margin-right: 12px;
+        margin-left: 2px;   
+    }
+
+    &.--linkedin, &.--square-github {
+        width: 28px;
+        height: 30px;
+        margin-right: 10px;
+    }
+}
+
+.about-me-svg {
+    align-self: center;
+
+    // mobile
+    margin: 12px;
+    height: 52px;
+
+    &:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    // tablet & desktop
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        &:last-of-type {
+            margin-bottom: 12px;
+        }
+    }
+}

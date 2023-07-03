@@ -5,33 +5,52 @@
 
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.title-page-top {
+    display: flex;
+    flex-direction: column;
 
     // mobile
     align-items: center;
+    margin-left: 71px;
+    margin-right: 71px;
+    min-height: 75vh;
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        // margin-left: 200px;
+    }
 
     // tablet & desktop
-	@media only screen and (min-width: const.$mobile) {
+    @media only screen and (min-width: const.$mobile) {
         align-items: start;
-	}
+        justify-content: center;
+    }
 }
 
 h1 {
     font-weight: 300;
 
     // mobile
-    font-size: 52px;
-    margin: 180px 52px 0 52px;
+    font-size: 45px;
+    margin-top: 180px;
+    margin-bottom: 0px;
     
     // tablet
 	@media only screen and (min-width: const.$mobile) {
         font-size: 93px;
-        margin: 300px 73px 0 73px;
+        // margin: 300px 73px 0 73px;
+        margin-top: 300px;
 	}
 
     // desktop
     @media only screen and (min-width: const.$tablet) {
         font-size: 85px;
-        margin: 150px 200px 0 200px;
+        // margin: 150px 200px 0 200px;
+        margin-top: 150px;
 	}
 }
 
@@ -39,19 +58,19 @@ h3 {
     font-weight: 300;
 
     // mobile
-    font-size: 24px;
-    margin: 40px 52px;
+    font-size: 20px;
+    margin-top: 30px;
 
     // tablet
 	@media only screen and (min-width: const.$mobile) {
         font-size: 36px;
-        margin: 46px 73px 0 73px;
+        margin-top: 46px;
 	}
 
     // desktop
     @media only screen and (min-width: const.$tablet) {
         font-size: 32px;
-        margin: 32px 200px 0 200px;
+        margin-top: 32px;
     }
 }
 
@@ -64,14 +83,14 @@ h3 {
     font-weight: 300;
     background-color: const.$red;
 
-    margin: 10px 52px 80px 52px;
-
 	border: 1px solid transparent;
     border-radius: 16px;
 
     // mobile
     width: 175px;
     padding: 13px 15px;
+    margin-top: 10px;
+    margin-bottom: 80px;
     font-size: 24px;
 
     // tablet
@@ -79,12 +98,12 @@ h3 {
         width: 200px;
         padding: 16px 18px;
         font-size: 27px;
-        margin: 52px 73px 150px 73px;
+        // margin: 52px 73px 150px 73px;
 	}
 
     // desktop
     @media only screen and (min-width: const.$tablet) {
-        margin: 40px 200px 110px 200px;
+        // margin: 40px 200px 110px 200px;
     }
 }
 

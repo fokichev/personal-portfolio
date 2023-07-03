@@ -1,21 +1,55 @@
+@use 'constants' as const;
+
 #root {
-  width: 100%
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
-  /* padding: 2rem; */
-  /* text-align: center; */
+	width: 100%
+	/* max-width: 1280px; */
+	/* margin: 0 auto; */
+	/* padding: 2rem; */
+	/* text-align: center; */
+}
+
+.app {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.center-content {
+	max-width: const.$max-width;
+}
+
+.grey-bg {
+	width: 100%;
+	background-color: const.$grey;
+	display: flex;
+	justify-content: center;
+}
+
+.blue-bg {
+	
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 35px;
+
+	// desktop
+	@media only screen and (min-width: const.$tablet) {
+		font-size: 51px;
+	}
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
+		a:nth-of-type(2) .logo {
+			animation: logo-spin infinite 20s linear;
+		}
+	} */
 /* 
 .card {
-  padding: 2em;
+	padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+	color: #888;
 } */

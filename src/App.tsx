@@ -20,10 +20,10 @@ const App = () => {
 
 	return (
 		<>
-			<div className="flex-col">
+			<div className='app'>
 				<Navbar orientation={orientation}/>
 				<TitlePage orientation={orientation}/>
-				{/* <AboutMe orientation={orientation}/> */}
+				<AboutMe orientation={orientation}/>
 			</div>
 			
 

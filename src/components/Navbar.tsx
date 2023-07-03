@@ -1,7 +1,7 @@
 import "../styles/Navbar.scss";
 
-import { ReactComponent as MenuIcon } from "../assets/icons/bars-solid.svg";
-import { ReactComponent as ContactIcon } from "../assets/icons/envelope-solid.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { OrientationType } from "../types";
 
 const NAV_MAP = [
@@ -24,14 +24,14 @@ const Navbar = (props: NavbarProps) => {
     } = orientation;
 
     return (
-        <div className="navbar">
+        <div className="center-content navbar">
             <span className="logo">
                 {desktop ? "Polina" : "P"}
                 <b>{desktop ? "Fokicheva" : "F"}</b>
             </span>
             {
                 !desktop && (
-                    <ContactIcon className="contact-icon" />
+                    <FontAwesomeIcon icon="envelope" className="contact-icon"/>
                 )
             }
             {
@@ -52,7 +52,7 @@ const Navbar = (props: NavbarProps) => {
             }
             {
                 !desktop && (
-                    <MenuIcon className="menu-icon"/>
+                    <FontAwesomeIcon icon="bars" className="menu-icon"/>
                 )
             }
 

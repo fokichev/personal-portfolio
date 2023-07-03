@@ -3,17 +3,19 @@
 .navbar {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
+	width: 100%;
     justify-content: space-between;
     align-items: center;
+
+
     font-family: Rubik, Inter, system-ui, Helvetica, Arial, sans-serif;
 
 	// mobile
-	padding: 11px 19px;
+	padding: 11px;
 	
 	// tablet
 	@media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
-		padding: 16px 34px;
+		padding: 16px;
 	}
 	
 	// desktop
@@ -36,9 +38,17 @@
 
 	// mobile
     font-size: 37px;
+	padding-left: 19px;
+
+	// tablet
+	@media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+		padding-left: 34px;
+	}
+
 	// desktop
 	@media only screen and (min-width: const.$tablet) {
 		font-size: 32px;
+		padding-left: 10px;
 	}
 
 }
@@ -73,19 +83,28 @@
 .menu-icon{
 	// mobile
 	width: 27px;
+	height: 31px;
 	// total x needs to be 45px=w+m*2 => m=(45-w)/2
 	margin: 0 9px;
+	padding-right: 19px;
 
 	// tablet
 	@media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
 		width: 39px;
 		height: 44px;
 		margin: 0 3px;
+		padding-right: 34px;
+	}
+	
+	// desktop
+	@media only screen and (min-width: const.$tablet) {
+		padding-right: 10px;
 	}
 }
 
 .contact-icon {
 	width: 34px;
+	height: 34px;
 	color: const.$white;
 	padding: 10px;
 	border: 5px solid const.$red;
