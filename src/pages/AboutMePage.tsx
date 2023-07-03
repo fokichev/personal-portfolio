@@ -1,4 +1,4 @@
-import "../styles/AboutMe.scss";
+import "../styles/AboutMePage.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import AboutMePhoto from "../assets/images/about-me-photo.png";
@@ -14,7 +14,7 @@ const ROW_DATA = [
     { icon: "square-github", type: "fab", text: "github.com/fokicheva", link: true },
 ] as { icon: IconName, type: IconPrefix, text: string }[];
 
-const AboutMe = (props: TitlePageProps) => {
+const AboutMePage = (props: AboutMePageProps) => {
     const {
         orientation
     } = props;
@@ -44,7 +44,7 @@ const AboutMe = (props: TitlePageProps) => {
     }
     else {
         return (
-            <div className="center-content about-me">
+            <div className="grey-bg center-content about-me">
                 <div className="about-me-top">
                     <img src={AboutMePhoto}/>
                     <TextSection/>
@@ -103,8 +103,8 @@ const DetailsSection = () => {
 }
 
 
-interface TitlePageProps {
+interface AboutMePageProps {
     orientation: OrientationType
 }
 
-export default AboutMe
+export default AboutMePage;

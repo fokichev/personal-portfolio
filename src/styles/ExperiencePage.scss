@@ -1,0 +1,114 @@
+@use 'constants' as const;
+
+$side-margin: 34px;
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    margin: 30px 0;
+    
+    color: const.$navy;
+
+    font-weight: 400;
+}
+
+.experience-block {
+    display: flex;
+
+    // mobile
+    flex-direction: column;
+
+    // tablet & desktop
+    @media only screen and (min-width: const.$mobile) {
+        flex-direction: row;
+    }
+}
+
+.experience-text {
+    font-size: 16px;
+
+    margin: 10px 20px 0 20px;
+
+    // tablet
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        font-size: 20px;
+    }
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        font-size: 22px;
+    }
+
+    // tablet & desktop
+    @media only screen and (min-width: const.$mobile) {
+        width: 60%;
+    }
+}
+
+.experience-circle {
+    color: const.$red;
+    width: 14px;
+    height: 14px;
+    margin: 0 10px;
+}
+
+.experience-text-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h2 {
+        color: const.$navy;
+
+        font-size: 28px;
+        font-weight: 500;
+        font-style: italic;
+
+        margin: 0;
+    }
+}
+
+.experience-text-block {
+    margin: 10px $side-margin 0 $side-margin;
+
+    h4 {
+        color: const.$red;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.experience-text-list {
+    padding: 0 20px 0 $side-margin;
+}
+
+
+.experience-img {
+    align-self: center;
+    padding: 20px;
+
+    // mobile
+    width: calc(100% - $side-margin - $side-margin);
+    max-width: 400px;
+
+    &.--smaller {
+        width: calc(80% - $side-margin - $side-margin);
+        padding: 30px;
+        max-width: 300px;
+    }
+
+    // tablet & desktop
+    @media only screen and (min-width: const.$mobile) {
+        width: calc(40% - $side-margin - $side-margin);
+
+        &.--smaller {
+            width: calc(30% - $side-margin - $side-margin);
+            padding: 30px
+        }
+    }
+}

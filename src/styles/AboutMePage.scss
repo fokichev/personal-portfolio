@@ -2,7 +2,6 @@
 
 .about-me {
     display: flex;
-    background-color: const.$grey;
     align-items: center;
     color: const.$navy;
     width: 100%;
@@ -55,8 +54,8 @@
 
     // desktop
 	@media only screen and (min-width: const.$tablet) {
-        // margin: 0 140px;
         justify-content: space-between;
+        padding: 20px 0 80px 0;
 	}
 
     // tablet & desktop

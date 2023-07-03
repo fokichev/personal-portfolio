@@ -1,5 +1,5 @@
 import { IconName } from "@fortawesome/fontawesome-svg-core";
-import "../styles/Services.scss";
+import "../styles/ServicesPage.scss";
 
 import { OrientationType } from "../types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,7 +54,7 @@ const SERVICE_MAP = [
 ] as ServiceType[];
 
 
-const Services = (props: ServicesProps) => {
+const ServicesPage = (props: ServicesPageProps) => {
     const {
         orientation
     } = props;
@@ -93,8 +93,8 @@ type ServiceType = {
     list?: string[]
 }
 
-interface ServicesProps {
+interface ServicesPageProps {
     orientation: OrientationType
 }
 
-export default Services;
+export default ServicesPage;

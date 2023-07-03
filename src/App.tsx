@@ -3,17 +3,17 @@ import { useState } from 'react'
 // import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar';
 import TitlePage from './pages/TitlePage';
-import AboutMe from './pages/AboutMe';
-import Services from './pages/Services';
+import AboutMePage from './pages/AboutMePage';
+import ServicesPage from './pages/ServicesPage';
 
 import './styles/App.scss'
 import useMediaQuery from './hooks/useMediaQuery';
+import ExperiencePage from './pages/ExperiencePage';
 
 const MOBILE_WIDTH = 640;
 const TABLET_WIDTH = 1040;
 
 const App = () => {
-//   const [count, setCount] = useState(0)
 	const mobile = useMediaQuery(`(max-width: ${MOBILE_WIDTH}px)`);
 	const tablet = !mobile && useMediaQuery(`(max-width: ${TABLET_WIDTH}px)`);
 	const desktop = !(mobile || tablet);
@@ -25,11 +25,10 @@ const App = () => {
 			<div className='app'>
 				<Navbar orientation={orientation}/>
 				<TitlePage orientation={orientation}/>
-				<AboutMe orientation={orientation}/>
-				<Services orientation={orientation}/>
+				<AboutMePage orientation={orientation}/>
+				<ServicesPage orientation={orientation}/>
+				<ExperiencePage orientation={orientation}/>
 			</div>
-			
-
 		</>
 	)
 }
