@@ -16,6 +16,28 @@
         font-size: 22px;
 	}
 
+    h2 {
+        color: const.$red;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    img {
+        // mobile
+        width: 265px;
+    
+        // tablet
+        @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+            width: 46%
+        }
+    
+        // desktop
+        @media only screen and (min-width: const.$tablet) {
+            width: 46%;
+            max-width: 600px;
+        }
+    }
+
 }
 
 .about-me-top {
@@ -53,22 +75,6 @@
 	}
 }
 
-img {
-    // mobile
-    width: 265px;
-
-    // tablet
-    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
-        width: 46%
-    }
-
-    // desktop
-	@media only screen and (min-width: const.$tablet) {
-		width: 46%;
-        max-width: 600px;
-	}
-}
-
 .about-me-text-section {
     display: flex;
     flex-direction: column;
@@ -85,12 +91,6 @@ img {
 	@media only screen and (min-width: const.$tablet) {
 		align-items: start;
 	}
-}
-
-h2 {
-    color: const.$red;
-    margin-top: 15px;
-    margin-bottom: 0;
 }
 
 .about-me-text {

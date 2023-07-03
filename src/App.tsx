@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Navbar from './components/Navbar';
 import TitlePage from './pages/TitlePage';
 import AboutMe from './pages/AboutMe';
+import Services from './pages/Services';
+
 import './styles/App.scss'
 import useMediaQuery from './hooks/useMediaQuery';
 
@@ -24,6 +26,7 @@ const App = () => {
 				<Navbar orientation={orientation}/>
 				<TitlePage orientation={orientation}/>
 				<AboutMe orientation={orientation}/>
+				<Services orientation={orientation}/>
 			</div>
 			
 

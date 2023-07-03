@@ -21,13 +21,19 @@
 
 .grey-bg {
 	width: 100%;
-	background-color: const.$grey;
 	display: flex;
 	justify-content: center;
+
+	background-color: const.$grey;
 }
 
 .blue-bg {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 	
+	background-image: url("../assets/images/code-bg.jpg");
+	background-size: cover;
 }
 
 h2 {
