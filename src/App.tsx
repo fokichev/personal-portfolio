@@ -10,6 +10,7 @@ import './styles/App.scss'
 import useMediaQuery from './hooks/useMediaQuery';
 import ExperiencePage from './pages/ExperiencePage';
 import PortfolioPage from './pages/PortfolioPage';
+import ContactMePage from './pages/ContactMePage';
 
 const MOBILE_WIDTH = 640;
 const TABLET_WIDTH = 1040;
@@ -29,7 +30,8 @@ const App = () => {
 				<AboutMePage orientation={orientation}/>
 				<ServicesPage orientation={orientation}/>
 				<ExperiencePage orientation={orientation}/>
-				<PortfolioPage orientations={orientation}/>
+				<PortfolioPage orientation={orientation}/>
+				<ContactMePage orientation={orientation}/>
 			</div>
 		</>
 	)

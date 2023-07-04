@@ -67,7 +67,7 @@ type PortfolioType = {
 }
 
 interface PortfolioPageProps {
-    orientations: OrientationType
+    orientation: OrientationType
 }
 
 export default PortfolioPage;

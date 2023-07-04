@@ -5,7 +5,8 @@
     flex-direction: column;
     align-items: center;
     
-    margin: 40px 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
 
     h2 {
         margin: 0;
@@ -35,11 +36,10 @@
 .portfolio-item {
     display: flex;
 
-
     border: 1 solid transparent;
     border-radius: 5px;
 
-    background-color: const.$navy;
+    background-color: const.$navy2;
 
     // mobile 
     margin: 10px 30px;
@@ -49,8 +49,7 @@
     // tablet & desktop
     @media only screen and (min-width: const.$mobile) {
         flex-direction: row;
-        margin: 10px 0;
-        // padding: 20px 25px 30px 25px;
+        margin: 10px 20px;
         padding: 40px;
         width: 100%;
     }

@@ -1,0 +1,207 @@
+@use 'constants' as const;
+
+.contact-me {
+    display: flex;
+    color: const.$navy;
+    
+    font-weight: 400;
+    padding: 30px 40px 55px 40px;
+
+    // mobile
+    font-size: 16px;
+    flex-direction: column;
+
+    h2 {
+        color: const.$red;
+        margin: 0;
+    }
+
+    p {
+        margin: 5px 0 0 0;
+    }
+
+    // tablet
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        font-size: 20px;
+        padding: 60px 64px;
+    }
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        font-size: 26px;
+        padding: 60px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.contact-me-top {
+    display: flex;
+
+    // mobile
+    flex-direction: column;
+
+    // tablet
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        width: 35%;
+    }
+}
+
+.contact-me-text {
+    display: flex;
+    flex-direction: column;
+
+    // tablet
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        width: 40%;
+    }
+}
+
+.contact-me-links {
+    display: flex;
+    flex-direction: column;
+
+    // tablet
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        width: 50%;
+    }
+}
+
+.contact-me-link-row {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        margin: 30px 0 50px 0;
+    }
+
+    .icon {
+        color: const.$red;
+        width: 28px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    a {
+        color: const.$navy;
+        text-decoration: underline;
+    }
+}
+
+.contact-me-svg-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-me-svg {
+    // mobile
+    width: 45%;
+
+    &:last-of-type {
+        margin-bottom: 5%;
+        width: 40%;
+    }
+}
+
+.contact-me-form {
+
+    background-color: const.$navy2;
+    border-radius: 21px;
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        width: 55%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        padding: 26px 20px;
+
+        // tablet
+        @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+            padding: 50px;
+        }
+
+        // desktop
+        @media only screen and (min-width: const.$tablet) {
+            padding: 50px 80px;
+        }
+    }
+
+    input, textarea {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+
+        background-color: const.$lightnavy;
+
+        border: 1px solid transparent;
+        border-radius: 12px;
+        
+        padding: 12px 10px;
+        margin-bottom: 22px;
+
+        display: flex;
+
+        &::placeholder {
+            color: const.$white;
+            opacity: 1;
+        }
+
+        
+        &:-ms-input-placeholder, ::-ms-input-placeholder {
+            color: const.$white;
+        }
+
+        // tablet
+        @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+            font-size: 20px;
+            padding: 14px 20px;
+            margin-bottom: 40px;
+        }
+
+        // desktop
+        @media only screen and (min-width: const.$tablet) {
+            font-size: 24px;
+            padding: 11px 20px;
+            margin-bottom: 40px;
+        }
+    }
+
+    button {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+
+        background-color: const.$red;
+
+        border: 1px solid transparent;
+        border-radius: 12px;
+
+        padding: 10px 18px;
+        margin: 0;
+        width: fit-content;
+
+        // tablet
+        @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+            font-size: 20px;
+            padding: 15px 25px;
+        }
+
+        // desktop
+        @media only screen and (min-width: const.$tablet) {
+            font-size: 24px;
+            padding: 11px 20px;
+        }
+    }
+}
