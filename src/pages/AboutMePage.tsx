@@ -2,11 +2,13 @@ import "../styles/AboutMePage.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import AboutMePhoto from "../assets/images/about-me-photo.png";
+import AboutMePhotoColor from "../assets/images/about-me-photo-color.png";
 import { ReactComponent as UpWorkSVG } from "../assets/icons/upwork.svg";
 import { ReactComponent as FiverrSVG } from "../assets/icons/fiverr.svg";
 
 import { IconPrefix, IconName } from "@fortawesome/fontawesome-svg-core";
 import { LinksType, OrientationType } from "../types";
+import { useState } from "react";
 
 const ROW_DATA = [
     { icon: "location-dot", type: "fas", text: "London, United Kingdom" },
@@ -23,6 +25,8 @@ const AboutMePage = (props: AboutMePageProps) => {
     const {
         desktop
     } = orientation;
+
+    const [imgHover, setImgHover] = useState(false);
     
     if (desktop) {
         return (
@@ -30,7 +34,12 @@ const AboutMePage = (props: AboutMePageProps) => {
                 <a id="about"/>
                 <div className="center-content about-me">
                     <div className="about-me-top">
-                        <img src={AboutMePhoto}/>
+                        <img
+                            src={imgHover ? AboutMePhotoColor : AboutMePhoto}
+                            onMouseEnter={() => desktop ? {} : setImgHover(true)}
+                            onMouseLeave={() => setImgHover(false)}
+                            onClick={() => desktop ? setImgHover(!imgHover) : {}}
+                        />
                         <div className="about-me-right">
                             <TextSection/>
                             <DetailsSection links={links}/>

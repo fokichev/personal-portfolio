@@ -2,9 +2,19 @@ import "../styles/ExperiencePage.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import PracticePalPhoto from "../assets/images/practice-pal-photo.png";
+import PracticePalPhotoColor from "../assets/images/practice-pal-photo-color.png";
 import GradPhoto from "../assets/images/grad-photo.png";
+import GradPhotoColor from "../assets/images/grad-photo-color.png";
 
-const ExperiencePage = () => {
+import { useState } from "react";
+import { OrientationType } from "../types";
+
+const ExperiencePage = (props: { orientation: OrientationType }) => {
+    const { desktop } = props.orientation;
+
+    const [ imgHoverPP, setImgHoverPP ] = useState(false);
+    const [ imgHoverGrad, setImgHoverGrad ] = useState(false);
+
     return (
         <div className="grey-bg">
             <a id="experience"/> 
@@ -27,7 +37,13 @@ const ExperiencePage = () => {
                             <li>Support sales team by creating 2.5k ranked quality leads by combining public government data with our client data. </li>
                         </ul>
                     </div>
-                    <img src={PracticePalPhoto} className="experience-img"/>
+                    <img
+                        className="experience-img"
+                        src={imgHoverPP ? PracticePalPhotoColor : PracticePalPhoto}
+                        onMouseEnter={() => desktop ? {} : setImgHoverPP(true)}
+                        onMouseLeave={() => setImgHoverPP(false)}
+                        onClick={() => desktop ? setImgHoverPP(!imgHoverPP) : {}}
+                    />
                 </div>
                 
                 <div className="experience-block">
@@ -47,7 +63,13 @@ const ExperiencePage = () => {
                             <p>BSc Computer Science</p>
                         </div>
                     </div>
-                    <img src={GradPhoto} className="experience-img --smaller"/>
+                    <img
+                        className="experience-img --smaller"
+                        src={imgHoverGrad ? GradPhotoColor : GradPhoto}
+                        onMouseEnter={() => desktop ? {} : setImgHoverGrad(true)}
+                        onMouseLeave={() => setImgHoverGrad(false)}
+                        onClick={() => desktop ? setImgHoverGrad(!imgHoverGrad) : {}}
+                    />
                 </div>
             
             </div>

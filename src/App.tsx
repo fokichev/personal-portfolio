@@ -33,7 +33,7 @@ const App = () => {
 				<TitlePage orientation={orientation}/>
 				<AboutMePage orientation={orientation} links={links}/>
 				<ServicesPage />
-				<ExperiencePage />
+				<ExperiencePage orientation={orientation}/>
 				<PortfolioPage />
 				<ContactMePage links={links}/>
 				<Footer orientation={orientation}/>

@@ -1,8 +1,12 @@
 import "../styles/PortfolioPage.scss";
 
 import PixelIslandThumb from "../assets/images/portfolio_thumbs/pixel_island.png";
+import PixelIslandThumbColor from "../assets/images/portfolio_thumbs/pixel_island-color.png";
 import WordCloudThumb from "../assets/images/portfolio_thumbs/word_cloud.png";
+import WordCloudThumbColor from "../assets/images/portfolio_thumbs/word_cloud-color.png";
 import PortfolioWebsiteThumb from "../assets/images/portfolio_thumbs/portfolio_website.png";
+import PortfolopWebsiteThumbColor from "../assets/images/portfolio_thumbs/portfolio_website-color.png";
+import { useState } from "react";
 
 const PORTFOLIO_MAP = [
     {
@@ -11,6 +15,7 @@ const PORTFOLIO_MAP = [
         langs: "React - JavaScript - Cordova",
         description: "A mobile application created for a BCs Computer Science dissertation at Keele University. The goal is to use the psychological concept of Gamification to motivate users to do the more mundane daily tasks.",
         img: PixelIslandThumb,
+        imgColor: PixelIslandThumbColor,
         link: "https://github.com/fokicheva/Pixel_Island"
     },
     {
@@ -19,6 +24,7 @@ const PORTFOLIO_MAP = [
         langs: "Python - Twitter API",
         description: "A word cloud generator that, using Python and Twitter API, generates a word cloud of the user’s most tweeted words.",
         img: WordCloudThumb,
+        imgColor: WordCloudThumbColor,
         link: "https://github.com/fokicheva/Twitter_Word_Cloud"
     },
     {
@@ -27,6 +33,7 @@ const PORTFOLIO_MAP = [
         langs: "React - SASS",
         description: "A personal website and portfolio to display my projects and resume. Coded in React and SASS. Responsive design between mobile, tablet and desktop.",
         img: PortfolioWebsiteThumb,
+        imgColor: PortfolopWebsiteThumbColor,
         link: "https://github.com/fokicheva/personal-portfolio"
     }
 ] as PortfolioType[];
@@ -47,7 +54,10 @@ const PortfolioPage = () => {
 }
 
 const PortfolioCard = ({ item }: { item: PortfolioType }) => {
-    const { title, langs, description, img, link } = item;
+    const { title, langs, description, img, imgColor, link } = item;
+
+    const [imgHover, setImgHover] = useState(false);
+
     return (
         <div className="portfolio-item">
             <div className="portfolio-item-text">
@@ -56,7 +66,11 @@ const PortfolioCard = ({ item }: { item: PortfolioType }) => {
                 <p className="description">{description}</p>
             </div>
             <a href={link}>
-                <img src={img} />
+                <img
+                    src={imgHover ? imgColor : img}
+                    onMouseEnter={() => setImgHover(true)}
+                    onMouseLeave={() => setImgHover(false)}
+                />
             </a>
         </div>
     )
@@ -68,6 +82,7 @@ type PortfolioType = {
     langs: string,
     description: string,
     img: string,
+    imgColor: string,
     link: string
 }
 
