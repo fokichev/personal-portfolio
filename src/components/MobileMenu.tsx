@@ -24,13 +24,8 @@ const MobileMenu = ({ navItems, hidden, onClose }: MobileMenuProps) => {
                                 key={key}
                                 onClick={() => onClick(item)}
                             >
-                                {/* <a
-                                    href={outline ? "mailto:contact@fokicheva.com" : `#${key}`}
-                                    onClick={onClose}
-                                > */}
-                                    { outline && <FontAwesomeIcon icon="at" />}
-                                    {text}
-                                {/* </a> */}
+                                { outline && <FontAwesomeIcon icon="at" />}
+                                {text}
                             </div>
                         )
                     })
