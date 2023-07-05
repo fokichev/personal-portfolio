@@ -83,8 +83,8 @@ const DetailsSection = () => {
         <div className="about-me-bottom">
             <div className="about-me-bottom-links">
                 {
-                    ROW_DATA.map(row => (
-                        <div className="about-me-row">
+                    ROW_DATA.map((row, i) => (
+                        <div className="about-me-row" key={i}>
                             <FontAwesomeIcon
                                 icon={[row.type, row.icon]}
                                 className={`about-me-icon --${row.icon}`}

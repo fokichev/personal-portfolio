@@ -1,0 +1,67 @@
+@use 'constants' as const;
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: const.$Rubik;
+
+    // mobile
+    width: calc(100% - 20px);
+    padding: 25px 10px;
+
+    // tablet
+    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        width: calc(100% - 50px);
+        padding: 30px 25px;
+    }
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.footer-top-row {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 13px;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+
+    
+    font-size: 20px;
+    width: 600px;
+    text-transform: uppercase;
+}
+
+.logo{
+    &.--footer {
+        font-size: 28px;
+
+        // desktop
+        @media only screen and (min-width: const.$tablet) {
+            font-size: 37px;
+        }
+    }
+}
+
+.repo-link {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+    .chevron {
+        margin-right: 5px;
+    }
+
+    span {
+        color: const.$white;
+    }
+}

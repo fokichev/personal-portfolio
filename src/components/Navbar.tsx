@@ -4,13 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { OrientationType } from "../types";
 
-const NAV_MAP = [
+export const NAV_MAP = [
     { key: "about", text: "About" },
     { key: "services", text: "Services" },
     { key: "experience", text: "Experience" },
     { key: "portfolio", text: "Portfolio" },
     { key: "contact-me", text: "Contact Me", outline: true },
-]
+] as NavbarMap[];
 
 const Navbar = (props: NavbarProps) => {
     const {
@@ -25,7 +25,7 @@ const Navbar = (props: NavbarProps) => {
 
     return (
         <div className="center-content navbar">
-            <span className="logo">
+            <span className="logo --navbar">
                 {desktop ? "Polina" : "P"}
                 <b>{desktop ? "Fokicheva" : "F"}</b>
             </span>
@@ -58,6 +58,12 @@ const Navbar = (props: NavbarProps) => {
 
         </div>
     )
+}
+
+type NavbarMap = {
+    key: string,
+    text: string,
+    outline?: boolean
 }
 
 interface NavbarProps {

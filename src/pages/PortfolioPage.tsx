@@ -37,7 +37,7 @@ const PortfolioPage = (props: PortfolioPageProps) => {
                 <h2>Portfolio</h2>
                 <p>Here are some personal projects I’ve built.</p>
                 <div className="portfolio-list">
-                    { PORTFOLIO_MAP.map(item => <PortfolioCard item={item} /> ) }
+                    { PORTFOLIO_MAP.map(item => <PortfolioCard item={item}  key={item.key} /> ) }
                 </div>
             </div>
         </div>
@@ -45,9 +45,9 @@ const PortfolioPage = (props: PortfolioPageProps) => {
 }
 
 const PortfolioCard = ({ item }: { item: PortfolioType }) => {
-    const { key, title, langs, description, img } = item;
+    const { title, langs, description, img } = item;
     return (
-        <div className="portfolio-item" id={key}>
+        <div className="portfolio-item">
             <div className="portfolio-item-text">
                 <p className="title">{title}</p>
                 <p className="langs">{langs}</p>

@@ -65,7 +65,7 @@ const ServicesPage = (props: ServicesPageProps) => {
                 <h2>Services</h2>
                 <p>I provide a range of full stack development services to businesses of any size.</p>
                 <div className="services-list">
-                    { SERVICE_MAP.map(item => <ServiceCard item={item} /> ) }
+                    { SERVICE_MAP.map(item => <ServiceCard item={item} key={item.key} /> ) }
                 </div>
             </div>
         </div>
@@ -73,13 +73,17 @@ const ServicesPage = (props: ServicesPageProps) => {
 }
 
 const ServiceCard = ({ item }: { item: ServiceType }) => {
-    const { key, title, icon, description, list } = item;
+    const { title, icon, description, list } = item;
     return (
-        <div className="service-item" id={key}>
+        <div className="service-item">
             <FontAwesomeIcon icon={icon} className="icon"/>
             <span className="title">{title}</span>
             <p className="description">{description}</p>
-            { list && <ul className="list">{ list?.map(listItem => <li>{listItem}</li>) }</ul> }
+            { list && (
+                <ul className="list">
+                    { list?.map((listItem, i) => <li key={i}>{listItem}</li>) }
+                </ul> 
+            )}
             
         </div>
     )

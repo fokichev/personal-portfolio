@@ -11,6 +11,7 @@ import useMediaQuery from './hooks/useMediaQuery';
 import ExperiencePage from './pages/ExperiencePage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactMePage from './pages/ContactMePage';
+import Footer from './pages/Footer';
 
 const MOBILE_WIDTH = 640;
 const TABLET_WIDTH = 1040;
@@ -32,6 +33,7 @@ const App = () => {
 				<ExperiencePage orientation={orientation}/>
 				<PortfolioPage orientation={orientation}/>
 				<ContactMePage orientation={orientation}/>
+				<Footer orientation={orientation}/>
 			</div>
 		</>
 	)

@@ -141,7 +141,7 @@
     }
 
     input, textarea {
-        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        font-family: const.$Inter;
         font-size: 16px;
 
         background-color: const.$lightnavy;
@@ -180,7 +180,7 @@
     }
 
     button {
-        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        font-family: const.$Inter;
         font-size: 16px;
 
         background-color: const.$red;

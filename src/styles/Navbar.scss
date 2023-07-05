@@ -8,7 +8,7 @@
     align-items: center;
 
 
-    font-family: Rubik, Inter, system-ui, Helvetica, Arial, sans-serif;
+    font-family: const.$Rubik;
 
 	// mobile
 	padding: 11px;
@@ -36,21 +36,22 @@
 		}
 	}
 
-	// mobile
-    font-size: 37px;
-	padding-left: 19px;
+	&.--navbar {
+		// mobile
+		font-size: 37px;
+		padding-left: 19px;
 
-	// tablet
-	@media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
-		padding-left: 34px;
+		// tablet
+		@media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+			padding-left: 34px;
+		}
+
+		// desktop
+		@media only screen and (min-width: const.$tablet) {
+			font-size: 32px;
+			padding-left: 10px;
+		}
 	}
-
-	// desktop
-	@media only screen and (min-width: const.$tablet) {
-		font-size: 32px;
-		padding-left: 10px;
-	}
-
 }
 
 .menu {
