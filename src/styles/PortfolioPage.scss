@@ -54,10 +54,14 @@
         width: 100%;
     }
 
-    img {
+    a {
         max-width: 100%;
         margin-top: 10px;
         margin: auto;
+
+        img {
+            max-width: 100%;
+        }
 
         // tablet & desktop
         @media only screen and (min-width: const.$mobile) {
@@ -86,6 +90,10 @@
         margin: 5px 0;
         font-weight: 400;
         font-style: italic;
+
+        a {
+            color: const.$white;
+        }
     }
 
     .langs {

@@ -26,14 +26,19 @@
 
 .logo {
 	cursor: pointer;
+	color: const.$white;
+	
+	&:hover {
+		text-decoration: none;
+
+		b {
+			color: const.$red
+		}
+	}
 
 	b {
 		transition: 0.1s all ease-in;
 		color: const.$white;
-
-		&:hover {
-			color: const.$red;
-		}
 	}
 
 	&.--navbar {
@@ -66,17 +71,20 @@
 	margin: 8px 14px;
 	transition: 0.1s all ease-in;
 
+	color: const.$white;
+
 	&.--outline {
 		border: 3px solid const.$red;
 		border-radius: 14px;
 
 		&:hover {
-			border-color: const.$white;	
+			border-color: const.$white;
 		}
 	}
 
 	&:hover {
 		color: const.$red;
+		text-decoration: none;
 	}
 
 }

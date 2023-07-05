@@ -18,17 +18,15 @@ const Navbar = (props: NavbarProps) => {
     } = props;
 
     const {
-        mobile,
-        tablet,
         desktop
     } = orientation;
 
     return (
         <div className="center-content navbar">
-            <span className="logo --navbar">
+            <a className="logo --navbar" href="/">
                 {desktop ? "Polina" : "P"}
                 <b>{desktop ? "Fokicheva" : "F"}</b>
-            </span>
+            </a>
             {
                 !desktop && (
                     <FontAwesomeIcon icon="envelope" className="contact-icon"/>
@@ -39,12 +37,13 @@ const Navbar = (props: NavbarProps) => {
                     <div className="menu">
                         {
                             NAV_MAP.map(item => (
-                                <span
+                                <a
+                                    href={`#${item.key}`}
                                     className={`menu-item ${item.outline ? "--outline" : ""}`}
                                     // onClick={} TODO anchor to diff parts of page
                                 >
                                     {item.text}
-                                </span>
+                                </a>
                             ))
                         }
                     </div>

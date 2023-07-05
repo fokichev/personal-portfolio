@@ -135,31 +135,15 @@
     flex-direction: column;
 }
 
-.about-me-bottom-svgs {
-    display: flex;
-
-    // mobile
-    flex-direction: column;
-
-    // desktop
-	@media only screen and (min-width: const.$tablet) {
-		flex-direction: row;
-        align-items: end;
-	}
-}
-
 .about-me-row {
     display: flex;
     flex-direction: row;
+    align-items: center;
     flex: 1;
 
     // mobile
     font-size: 16px;
     margin: 10px 25px;
-
-    &:first-of-type {
-        margin-top: 30px;
-    }
 
     // tablet	
     @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
@@ -175,6 +159,20 @@
     @media only screen and (min-width: const.$mobile) {
         &:first-of-type {
             margin-top: 10px;
+        }
+    }
+
+    &:first-of-type {
+        margin-top: 30px;
+    }
+
+    a {
+        color: const.$navy;
+        transition: 0.1s all ease-in;
+
+        &:hover {
+            text-decoration: none;
+            color: const.$red;
         }
     }
 }
@@ -196,21 +194,31 @@
     }
 }
 
-.about-me-svg {
-    align-self: center;
+
+.about-me-bottom-svgs {
+    display: flex;
 
     // mobile
-    margin: 12px;
-    height: 52px;
+    flex-direction: column;
 
-    &:last-of-type {
-        margin-bottom: 30px;
-    }
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+		flex-direction: row;
+        align-items: end;
+	}
 
-    // tablet & desktop
-    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+    a {
+        align-self: center;        
+        
+        // mobile
+        margin: 12px;
+
         &:last-of-type {
-            margin-bottom: 12px;
+            margin-bottom: 32px;
+        }
+
+        svg {
+            height: 52px;
         }
     }
 }

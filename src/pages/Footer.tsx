@@ -15,12 +15,13 @@ const Footer = (props: FooterProps) => {
                         NAV_MAP
                         .filter(item => !item.outline)
                         .map(item => (
-                            <span
+                            <a
+                                href={`#${item.key}`}
                                 className="footer-menu-item"
                                 // onClick={} TODO anchor to diff parts of page
                             >
                                 {item.text}
-                            </span>
+                            </a>
                         ))
                     }
                 </div>
@@ -38,13 +39,13 @@ const Footer = (props: FooterProps) => {
 }
 
 const Logo = () => (
-    <span className="logo --footer">
+    <a className="logo --footer" href="/">
         Polina<b>Fokicheva</b>
-    </span>
+    </a>
 )
 
 const RepoLink = () => (
-    <a href="" className="repo-link">
+    <a href="https://github.com/fokicheva/personal-portfolio" className="repo-link">
         <FontAwesomeIcon icon="chevron-right" className="chevron"/>
         <span>website repo :)</span>
     </a>

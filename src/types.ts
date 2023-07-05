@@ -3,3 +3,8 @@ export type OrientationType = {
     tablet: Boolean,
     desktop: Boolean
 }
+
+export type LinksType = {
+    upWorkLink: string,
+    fiverrLink: string
+}

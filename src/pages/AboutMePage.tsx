@@ -6,34 +6,34 @@ import { ReactComponent as UpWorkSVG } from "../assets/icons/upwork.svg";
 import { ReactComponent as FiverrSVG } from "../assets/icons/fiverr.svg";
 
 import { IconPrefix, IconName } from "@fortawesome/fontawesome-svg-core";
-import { OrientationType } from "../types";
+import { LinksType, OrientationType } from "../types";
 
 const ROW_DATA = [
     { icon: "location-dot", type: "fas", text: "London, United Kingdom" },
     { icon: "linkedin", type: "fab", text: "linkedin.com/in/polina-fokicheva", link: true },
     { icon: "square-github", type: "fab", text: "github.com/fokicheva", link: true },
-] as { icon: IconName, type: IconPrefix, text: string }[];
+] as { icon: IconName, type: IconPrefix, text: string, link?: boolean }[];
 
 const AboutMePage = (props: AboutMePageProps) => {
     const {
-        orientation
+        orientation,
+        links
     } = props;
 
     const {
-        mobile,
-        tablet,
         desktop
     } = orientation;
     
     if (desktop) {
         return (
             <div className="grey-bg">
+                <a id="about"/>
                 <div className="center-content about-me">
                     <div className="about-me-top">
                         <img src={AboutMePhoto}/>
                         <div className="about-me-right">
                             <TextSection/>
-                            <DetailsSection />
+                            <DetailsSection links={links}/>
                         </div>
                     </div>
                     
@@ -45,12 +45,12 @@ const AboutMePage = (props: AboutMePageProps) => {
     else {
         return (
             <div className="grey-bg center-content about-me">
+                <a id="about"/>
                 <div className="about-me-top">
                     <img src={AboutMePhoto}/>
                     <TextSection/>
-                    { desktop && <DetailsSection />}
                 </div>
-                { !desktop && <DetailsSection />}
+                <DetailsSection links={links}/>
             </div>
         )
     }
@@ -64,39 +64,44 @@ const TextSection = () => {
             <div className="about-me-text">
                 <p>
                     Hi! My name is Polina Fokicheva - Pol for short. 
-                    I’m a full stack dev making <a href="">things</a> on the web. 
+                    I’m a full stack dev making <a href="#portfolio">things</a> on the web. 
                     I like iced lattes and progressive metal.
                 </p>
                 <p>
                     I provide a range of web development services as a&nbsp;
-                    <a href="">freelance developer</a>. 
+                    <a href="#services">freelance developer</a>. 
                     Check me out at one of the platforms below, or&nbsp;
-                    <a href=""><u>get in touch</u></a> :)
+                    <a href="#contact-me"><u>get in touch</u></a> :)
                 </p>
             </div>
         </div>
     )
 }
 
-const DetailsSection = () => {
+const DetailsSection = ({ links }: { links: LinksType }) => {
+    const { upWorkLink, fiverrLink } = links;
+
     return (
         <div className="about-me-bottom">
             <div className="about-me-bottom-links">
                 {
                     ROW_DATA.map((row, i) => (
-                        <div className="about-me-row" key={i}>
+                        <div className="about-me-row" key={i} >
                             <FontAwesomeIcon
                                 icon={[row.type, row.icon]}
                                 className={`about-me-icon --${row.icon}`}
                             />
-                            <span>{row.text}</span>
+                            { row.link
+                                ? <a href={"https://" + row.text}>{row.text}</a>
+                                : <span>{row.text}</span>
+                            }
                         </div>
                     ))
                 }
             </div>
             <div className="about-me-bottom-svgs">
-                <UpWorkSVG className="about-me-svg"/>
-                <FiverrSVG className="about-me-svg"/>
+                <a href={upWorkLink}><UpWorkSVG/></a>
+                <a href={fiverrLink}><FiverrSVG/></a>
             </div>
         </div>
     )
@@ -105,6 +110,7 @@ const DetailsSection = () => {
 
 interface AboutMePageProps {
     orientation: OrientationType
+    links: LinksType
 }
 
 export default AboutMePage;

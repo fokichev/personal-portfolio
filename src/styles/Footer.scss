@@ -34,11 +34,21 @@
 .footer-menu {
     display: flex;
     justify-content: space-between;
-
     
     font-size: 20px;
     width: 600px;
+
     text-transform: uppercase;
+}
+
+.footer-menu-item {
+    color: const.$white;
+	transition: 0.1s all ease-in;
+
+    &:hover {
+        text-decoration: none;
+        color: const.$red;
+    }
 }
 
 .logo{
@@ -53,9 +63,16 @@
 }
 
 .repo-link {
-    font-size: 16px;
     display: flex;
     align-items: center;
+
+    // mobile
+    font-size: 16px;
+
+    // desktop
+    @media only screen and (min-width: const.$tablet) {
+        font-size: 20px;
+    }
 
     .chevron {
         margin-right: 5px;
@@ -63,5 +80,21 @@
 
     span {
         color: const.$white;
+    }
+
+    .chevron, span {
+        transition: 0.1s all ease-in;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        .chevron {
+            color: const.$white;
+        }
+
+        span {
+            color: const.$red;
+        }
     }
 }

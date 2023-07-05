@@ -4,11 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactComponent as UpWorkSVG } from "../assets/icons/upwork.svg";
 import { ReactComponent as FiverrSVG } from "../assets/icons/fiverr.svg";
 
-import { OrientationType } from "../types";
+import { LinksType } from "../types";
 
 const ContactMePage = (props: ContactMePageProps) => {
+    const { upWorkLink, fiverrLink } = props.links;
+
     return (
         <div className="grey-bg">
+            <a id="contact-me"/> 
             <div className="center-content contact-me">
                 <div className="contact-me-top">
                     <div className="contact-me-text">
@@ -18,13 +21,13 @@ const ContactMePage = (props: ContactMePageProps) => {
                     <div className="contaxt-me-links">
                         <div className="contact-me-link-row">
                             <FontAwesomeIcon icon={["fab", "linkedin"]} className="icon"/>
-                            <a href="">
+                            <a href="https://linkedin.com/in/polina-fokicheva">
                                 linkedin.com/in/polina-fokicheva
                             </a>
                         </div>
                         <div className="contact-me-svg-row">
-                            <UpWorkSVG className="contact-me-svg"/>
-                            <FiverrSVG className="contact-me-svg"/>
+                            <a href={upWorkLink}><UpWorkSVG /></a>
+                            <a href={fiverrLink}><FiverrSVG /></a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +46,7 @@ const ContactMePage = (props: ContactMePageProps) => {
 }
 
 interface ContactMePageProps {
-    orientation: OrientationType
+    links: LinksType
 }
 
 export default ContactMePage;

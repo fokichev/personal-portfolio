@@ -11,10 +11,12 @@ const TitlePage = (props: TitlePageProps) => {
     } = props;
 
     const {
-        mobile,
-        tablet,
-        desktop
+        mobile
     } = orientation;
+
+    const onClickBottomScroll = () => {
+        document.getElementById("about-link")?.click();
+    }
 
     return (
         <div className="title-page">
@@ -25,12 +27,15 @@ const TitlePage = (props: TitlePageProps) => {
                 <h3>
                     I’m a <b>full stack developer</b>, experienced with building and maintaining web applications.
                 </h3>
-                <button className="contact-button">
-                    Get in touch!
-                </button>
+                <a href="#contact-me">
+                    <button className="contact-button">
+                        Get in touch!
+                    </button>
+                </a>
+
             </div>
-            
-            <div className="bottom-scroll">
+            <a href="#about" id="about-link"/>
+            <div className="bottom-scroll" onClick={onClickBottomScroll}>
                 { mobile ? <DownIconMobile /> : <DownIconDesktop/> }
             </div>
         </div>

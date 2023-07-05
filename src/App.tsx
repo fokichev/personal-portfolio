@@ -1,13 +1,10 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import './styles/App.scss'
+import useMediaQuery from './hooks/useMediaQuery';
+
 import Navbar from './components/Navbar';
 import TitlePage from './pages/TitlePage';
 import AboutMePage from './pages/AboutMePage';
 import ServicesPage from './pages/ServicesPage';
-
-import './styles/App.scss'
-import useMediaQuery from './hooks/useMediaQuery';
 import ExperiencePage from './pages/ExperiencePage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactMePage from './pages/ContactMePage';
@@ -23,16 +20,22 @@ const App = () => {
 
 	const orientation = { mobile, tablet, desktop };
 
+	const links = {
+		upWorkLink: "https://www.upwork.com/freelancers/~01c0d5ed9e5dc8fd3c",
+		fiverrLink: "https://www.upwork.com/freelancers/~01c0d5ed9e5dc8fd3c" // temp
+	};
+
 	return (
 		<>
+			<a id="home"/>
 			<div className='app'>
 				<Navbar orientation={orientation}/>
 				<TitlePage orientation={orientation}/>
-				<AboutMePage orientation={orientation}/>
-				<ServicesPage orientation={orientation}/>
-				<ExperiencePage orientation={orientation}/>
-				<PortfolioPage orientation={orientation}/>
-				<ContactMePage orientation={orientation}/>
+				<AboutMePage orientation={orientation} links={links}/>
+				<ServicesPage />
+				<ExperiencePage />
+				<PortfolioPage />
+				<ContactMePage links={links}/>
 				<Footer orientation={orientation}/>
 			</div>
 		</>

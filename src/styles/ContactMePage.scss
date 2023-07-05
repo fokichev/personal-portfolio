@@ -101,15 +101,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
-.contact-me-svg {
-    // mobile
-    width: 45%;
+    a {
+        // mobile
+        width: 45%;    
+        
+        &:last-of-type {
+            margin-bottom: 5%;
+            width: 40%;
+        }
 
-    &:last-of-type {
-        margin-bottom: 5%;
-        width: 40%;
     }
 }
 
@@ -180,6 +181,7 @@
     }
 
     button {
+        cursor: pointer;
         font-family: const.$Inter;
         font-size: 16px;
 
