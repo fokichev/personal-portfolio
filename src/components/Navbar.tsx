@@ -3,6 +3,8 @@ import "../styles/Navbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { OrientationType } from "../types";
+import { useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 export const NAV_MAP = [
     { key: "about", text: "About" },
@@ -21,6 +23,8 @@ const Navbar = (props: NavbarProps) => {
         desktop
     } = orientation;
 
+    const [mobileMenu, setMobileMenu] = useState(false);
+
     return (
         <div className="center-content navbar">
             <a className="logo --navbar" href="/">
@@ -29,7 +33,9 @@ const Navbar = (props: NavbarProps) => {
             </a>
             {
                 !desktop && (
-                    <FontAwesomeIcon icon="envelope" className="contact-icon"/>
+                    <a href="mailto:contact@fokicheva.com">
+                        <FontAwesomeIcon icon="envelope" className="contact-icon"/>
+                    </a>
                 )
             }
             {
@@ -38,7 +44,7 @@ const Navbar = (props: NavbarProps) => {
                         {
                             NAV_MAP.map(item => (
                                 <a
-                                    href={`#${item.key}`}
+                                    href={item.outline ? "mailto:contact@fokicheva.com" : `#${item.key}`}
                                     className={`menu-item ${item.outline ? "--outline" : ""}`}
                                     // onClick={} TODO anchor to diff parts of page
                                 >
@@ -51,15 +57,29 @@ const Navbar = (props: NavbarProps) => {
             }
             {
                 !desktop && (
-                    <FontAwesomeIcon icon="bars" className="menu-icon"/>
+                    <>
+                        <FontAwesomeIcon
+                            icon={mobileMenu ? "xmark" : "bars"}
+                            className="menu-icon"
+                            onClick={() => setMobileMenu(!mobileMenu)}
+                        />
+                        <MobileMenu
+                            navItems={NAV_MAP}
+                            hidden={!mobileMenu}
+                            onClose={() => setMobileMenu(false)}
+                        />
+                    </>
+                    
                 )
             }
-
+            {/* {
+                mobileMenu && 
+            } */}
         </div>
     )
 }
 
-type NavbarMap = {
+export type NavbarMap = {
     key: string,
     text: string,
     outline?: boolean

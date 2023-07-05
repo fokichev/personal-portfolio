@@ -83,7 +83,7 @@ const TextSection = () => {
                     I provide a range of web development services as a&nbsp;
                     <a href="#services">freelance developer</a>. 
                     Check me out at one of the platforms below, or&nbsp;
-                    <a href="#contact-me"><u>get in touch</u></a> :)
+                    <a href="mailto:contact@fokicheva.com"><u>get in touch</u></a> :)
                 </p>
             </div>
         </div>

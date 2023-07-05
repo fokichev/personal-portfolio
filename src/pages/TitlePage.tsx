@@ -27,7 +27,7 @@ const TitlePage = (props: TitlePageProps) => {
                 <h3>
                     I’m a <b>full stack developer</b>, experienced with building and maintaining web applications.
                 </h3>
-                <a href="#contact-me">
+                <a href="mailto:contact@fokicheva.com">
                     <button className="contact-button">
                         Get in touch!
                     </button>

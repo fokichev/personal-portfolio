@@ -9,6 +9,14 @@ import { LinksType } from "../types";
 const ContactMePage = (props: ContactMePageProps) => {
     const { upWorkLink, fiverrLink } = props.links;
 
+    const onSubmit = (event: any) => {
+        event.preventDefault();
+        const subject = "Message from " + event.target.name.value;
+        const body = event.target.message.value;
+
+        window.location.href = `mailto:contact@fokicheva.com?subject=${subject}&body=${body}`;
+    }
+
     return (
         <div className="grey-bg">
             <a id="contact-me"/> 
@@ -32,11 +40,9 @@ const ContactMePage = (props: ContactMePageProps) => {
                     </div>
                 </div>
                 <div className="contact-me-form">
-                    <form>
-                        <input type="text" placeholder="Name*"/>
-                        <input type="text" placeholder="Email*"/>
-                        <input type="text" placeholder="Phone"/>
-                        <textarea placeholder="Message*" rows={6}/>
+                    <form onSubmit={onSubmit} action="">
+                        <input type="text" placeholder="Name" name="name"/>
+                        <textarea placeholder="Message" name="message" rows={6}/>
                         <button type="submit">Send Me a Message</button>
                     </form>
                 </div>

@@ -40,9 +40,9 @@ const ExperiencePage = (props: { orientation: OrientationType }) => {
                     <img
                         className="experience-img"
                         src={imgHoverPP ? PracticePalPhotoColor : PracticePalPhoto}
-                        onMouseEnter={() => desktop ? {} : setImgHoverPP(true)}
+                        onMouseEnter={() => desktop ? setImgHoverPP(true) : {}}
                         onMouseLeave={() => setImgHoverPP(false)}
-                        onClick={() => desktop ? setImgHoverPP(!imgHoverPP) : {}}
+                        onClick={() => desktop ? {} : setImgHoverPP(!imgHoverPP)}
                     />
                 </div>
                 
@@ -66,9 +66,9 @@ const ExperiencePage = (props: { orientation: OrientationType }) => {
                     <img
                         className="experience-img --smaller"
                         src={imgHoverGrad ? GradPhotoColor : GradPhoto}
-                        onMouseEnter={() => desktop ? {} : setImgHoverGrad(true)}
+                        onMouseEnter={() => desktop ? setImgHoverGrad(true) : {}}
                         onMouseLeave={() => setImgHoverGrad(false)}
-                        onClick={() => desktop ? setImgHoverGrad(!imgHoverGrad) : {}}
+                        onClick={() => desktop ? {} : setImgHoverGrad(!imgHoverGrad)}
                     />
                 </div>
             
