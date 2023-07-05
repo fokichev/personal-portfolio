@@ -36,9 +36,8 @@ const AboutMePage = (props: AboutMePageProps) => {
                     <div className="about-me-top">
                         <img
                             src={imgHover ? AboutMePhotoColor : AboutMePhoto}
-                            onMouseEnter={() => desktop ? {} : setImgHover(true)}
+                            onMouseEnter={() => setImgHover(true)}
                             onMouseLeave={() => setImgHover(false)}
-                            onClick={() => desktop ? setImgHover(!imgHover) : {}}
                         />
                         <div className="about-me-right">
                             <TextSection/>
@@ -56,7 +55,11 @@ const AboutMePage = (props: AboutMePageProps) => {
             <div className="grey-bg center-content about-me">
                 <a id="about"/>
                 <div className="about-me-top">
-                    <img src={AboutMePhoto}/>
+                    <img
+                        src={imgHover ? AboutMePhotoColor : AboutMePhoto}
+                        onMouseLeave={() => setImgHover(false)}
+                        onClick={() => setImgHover(!imgHover)}
+                    />
                     <TextSection/>
                 </div>
                 <DetailsSection links={links}/>
