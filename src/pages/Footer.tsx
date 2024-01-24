@@ -40,7 +40,7 @@ const Footer = (props: FooterProps) => {
 
 const Logo = () => (
     <a className="logo --footer" href="/">
-        Polina<b>Fokicheva</b>
+        Lev<b>Studios</b>
     </a>
 )
 

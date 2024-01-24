@@ -22,7 +22,7 @@ const TitlePage = (props: TitlePageProps) => {
         <div className="title-page">
             <div className="center-content title-page-top">
                 <h1>
-                    Hey, I'm <span className="accent"><b>Pol.</b></span>
+                    Hey, I'm <span className="accent"><b>Lev.</b></span>
                 </h1>
                 <h3>
                     I’m a <b>full stack developer</b>, experienced with building and maintaining web applications.

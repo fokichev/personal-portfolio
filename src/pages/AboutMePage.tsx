@@ -75,7 +75,7 @@ const TextSection = () => {
             <h2>About Me</h2>
             <div className="about-me-text">
                 <p>
-                    Hi! My name is Polina Fokicheva - Pol for short. 
+                    Hi! My name is Lev (previously Polina/Pol).
                     I’m a full stack dev making <a href="#portfolio">things</a> on the web. 
                     I like iced lattes and progressive metal.
                 </p>

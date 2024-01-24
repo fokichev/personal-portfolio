@@ -6,9 +6,29 @@ import WordCloudThumb from "../assets/images/portfolio_thumbs/word_cloud.png";
 import WordCloudThumbColor from "../assets/images/portfolio_thumbs/word_cloud-color.png";
 import PortfolioWebsiteThumb from "../assets/images/portfolio_thumbs/portfolio_website.png";
 import PortfolopWebsiteThumbColor from "../assets/images/portfolio_thumbs/portfolio_website-color.png";
+import KlaraSiteThumb from "../assets/images/portfolio_thumbs/klara_site.png";
+import KlaraSiteThumbColor from "../assets/images/portfolio_thumbs/klara_site-color.png";
 import { useState } from "react";
 
 const PORTFOLIO_MAP = [
+    {
+        key: "klara_site",
+        title: "Artist Portfolio",
+        langs: "React - SASS",
+        description: "A portfolio website for Klara Fokicheva, a London based artist.",
+        img: KlaraSiteThumb,
+        imgColor: KlaraSiteThumbColor,
+        link: "https://klarafokicheva.com"
+    },
+    {
+        key: "portfolio_website",
+        title: "Personal Website",
+        langs: "React - SASS",
+        description: "A personal website and portfolio to display my projects and resume. Coded in React and SASS. Responsive design between mobile, tablet and desktop.",
+        img: PortfolioWebsiteThumb,
+        imgColor: PortfolopWebsiteThumbColor,
+        link: "https://github.com/fokicheva/personal-portfolio"
+    },
     {
         key: "pixel_island",
         title: "Pixel Island",
@@ -27,15 +47,6 @@ const PORTFOLIO_MAP = [
         imgColor: WordCloudThumbColor,
         link: "https://github.com/fokicheva/Twitter_Word_Cloud"
     },
-    {
-        key: "portfolio_website",
-        title: "Personal Website",
-        langs: "React - SASS",
-        description: "A personal website and portfolio to display my projects and resume. Coded in React and SASS. Responsive design between mobile, tablet and desktop.",
-        img: PortfolioWebsiteThumb,
-        imgColor: PortfolopWebsiteThumbColor,
-        link: "https://github.com/fokicheva/personal-portfolio"
-    }
 ] as PortfolioType[];
 
 const PortfolioPage = () => {

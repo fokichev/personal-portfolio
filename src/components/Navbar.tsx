@@ -28,8 +28,8 @@ const Navbar = (props: NavbarProps) => {
     return (
         <div className="center-content navbar">
             <a className="logo --navbar" href="/">
-                {desktop ? "Polina" : "P"}
-                <b>{desktop ? "Fokicheva" : "F"}</b>
+                {desktop ? "Lev" : "L"}
+                <b>{desktop ? "Studios" : "S"}</b>
             </a>
             {
                 !desktop && (
