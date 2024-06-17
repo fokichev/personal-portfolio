@@ -8,7 +8,7 @@
     padding: 30px 40px 55px 40px;
 
     // mobile
-    font-size: 16px;
+    // font-size: 16px;
     flex-direction: column;
 
     h2 {
@@ -22,13 +22,13 @@
 
     // tablet
     @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
-        font-size: 20px;
+        // font-size: 20px;
         padding: 60px 64px;
     }
 
     // desktop
     @media only screen and (min-width: const.$tablet) {
-        font-size: 26px;
+        // font-size: 26px;
         padding: 60px;
         flex-direction: row;
         justify-content: space-between;
@@ -145,7 +145,6 @@
 
     input, textarea {
         font-family: const.$Inter;
-        font-size: 16px;
 
         background-color: const.$lightnavy;
 
@@ -169,14 +168,12 @@
 
         // tablet
         @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
-            font-size: 20px;
             padding: 14px 20px;
             margin-bottom: 40px;
         }
 
         // desktop
         @media only screen and (min-width: const.$tablet) {
-            font-size: 24px;
             padding: 11px 20px;
             margin-bottom: 40px;
         }
@@ -185,8 +182,7 @@
     button {
         cursor: pointer;
         font-family: const.$Inter;
-        font-size: 16px;
-
+        color: const.$white;
         background-color: const.$red;
 
         border: 1px solid transparent;
@@ -198,13 +194,11 @@
 
         // tablet
         @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
-            font-size: 20px;
             padding: 15px 25px;
         }
 
         // desktop
         @media only screen and (min-width: const.$tablet) {
-            font-size: 24px;
             padding: 11px 20px;
         }
     }

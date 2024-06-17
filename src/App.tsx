@@ -9,6 +9,7 @@ import ExperiencePage from './pages/ExperiencePage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactMePage from './pages/ContactMePage';
 import Footer from './pages/Footer';
+import SkillsPage from './pages/SkillsPage';
 
 const MOBILE_WIDTH = 640;
 const TABLET_WIDTH = 1040;
@@ -32,7 +33,8 @@ const App = () => {
 				<Navbar orientation={orientation}/>
 				<TitlePage orientation={orientation}/>
 				<AboutMePage orientation={orientation} links={links}/>
-				<ServicesPage />
+				<SkillsPage />
+				{/* <ServicesPage /> */}
 				<ExperiencePage orientation={orientation}/>
 				<PortfolioPage />
 				<ContactMePage links={links}/>

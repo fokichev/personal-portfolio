@@ -8,7 +8,7 @@ import MobileMenu from "./MobileMenu";
 
 export const NAV_MAP = [
     { key: "about", text: "About" },
-    { key: "services", text: "Services" },
+    // { key: "skills", text: "Skills" },
     { key: "experience", text: "Experience" },
     { key: "portfolio", text: "Portfolio" },
     { key: "contact-me", text: "Contact Me", outline: true },
@@ -29,7 +29,7 @@ const Navbar = (props: NavbarProps) => {
         <div className="center-content navbar">
             <a className="logo --navbar" href="/">
                 {desktop ? "Lev" : "L"}
-                <b>{desktop ? "Studios" : "S"}</b>
+                <b>{desktop ? "Fokichev" : "F"}</b>
             </a>
             {
                 !desktop && (

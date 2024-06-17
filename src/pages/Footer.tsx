@@ -18,7 +18,6 @@ const Footer = (props: FooterProps) => {
                             <a
                                 href={`#${item.key}`}
                                 className="footer-menu-item"
-                                // onClick={} TODO anchor to diff parts of page
                             >
                                 {item.text}
                             </a>
@@ -40,7 +39,7 @@ const Footer = (props: FooterProps) => {
 
 const Logo = () => (
     <a className="logo --footer" href="/">
-        Lev<b>Studios</b>
+        Lev<b>Fokichev</b>
     </a>
 )
 

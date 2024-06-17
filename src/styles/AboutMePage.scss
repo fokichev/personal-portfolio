@@ -7,33 +7,19 @@
     width: 100%;
     flex-direction: column;
 
-    // mobile & tablet
-    font-size: 20px;
-
-    // desktop
-	@media only screen and (min-width: const.$tablet) {
-        font-size: 22px;
-	}
-
-    h2 {
-        color: const.$red;
-        margin-top: 15px;
-        margin-bottom: 0;
-    }
-
     img {
         // mobile
         width: 265px;
     
-        // tablet
-        @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
+        // tablet & desktop
+        @media only screen and (min-width: const.$mobile) {
             width: 46%
         }
     
         // desktop
         @media only screen and (min-width: const.$tablet) {
-            width: 46%;
             max-width: 600px;
+            width: 35%
         }
     }
 
@@ -49,18 +35,17 @@
     // tablet
     @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
         margin: 0 70px 60px 70px;
-        justify-content: space-between;
 	}
 
     // desktop
 	@media only screen and (min-width: const.$tablet) {
-        justify-content: space-between;
         padding: 20px 0 80px 0;
 	}
 
     // tablet & desktop
     @media only screen and (min-width: const.$mobile) {
         flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -125,7 +110,6 @@
     // desktop
 	@media only screen and (min-width: const.$tablet) {
         padding: 30px;
-		// width: 100%;
         width: calc(100% - 60px);
 	}
 }
@@ -142,18 +126,12 @@
     flex: 1;
 
     // mobile
-    font-size: 16px;
+    // font-size: 16px;
     margin: 10px 25px;
 
-    // tablet	
-    @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
-        font-size: 18px;
+    &:first-of-type {
+        margin-top: 30px;
     }
-
-    // desktop
-	@media only screen and (min-width: const.$tablet) {
-        font-size: 22px;
-	}
 
     // tablet & desktop
     @media only screen and (min-width: const.$mobile) {
@@ -162,9 +140,6 @@
         }
     }
 
-    &:first-of-type {
-        margin-top: 30px;
-    }
 
     a {
         color: const.$navy;
@@ -212,10 +187,6 @@
         
         // mobile
         margin: 12px;
-
-        &:last-of-type {
-            margin-bottom: 32px;
-        }
 
         svg {
             height: 52px;

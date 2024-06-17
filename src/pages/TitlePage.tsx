@@ -24,9 +24,9 @@ const TitlePage = (props: TitlePageProps) => {
                 <h1>
                     Hey, I'm <span className="accent"><b>Lev.</b></span>
                 </h1>
-                <h3>
+                <h4>
                     I’m a <b>full stack developer</b>, experienced with building and maintaining web applications.
-                </h3>
+                </h4>
                 <a href="mailto:contact@fokicheva.com">
                     <button className="contact-button">
                         Get in touch!

@@ -2,76 +2,42 @@
 
 .title-page {
     font-family: const.$Rubik;
-
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
-
-    h1 {
-        font-weight: 300;
-    
-        // mobile
-        font-size: 45px;
-        margin-top: 180px;
-        margin-bottom: 0px;
-        
-        // tablet
-        @media only screen and (min-width: const.$mobile) {
-            font-size: 93px;
-            // margin: 300px 73px 0 73px;
-            margin-top: 300px;
-        }
-    
-        // desktop
-        @media only screen and (min-width: const.$tablet) {
-            font-size: 85px;
-            // margin: 150px 200px 0 200px;
-            margin-top: 150px;
-        }
-    }
-    
-    h3 {
-        font-weight: 300;
-    
-        // mobile
-        font-size: 20px;
-        margin-top: 30px;
-    
-        // tablet
-        @media only screen and (min-width: const.$mobile) {
-            font-size: 36px;
-            margin-top: 46px;
-        }
-    
-        // desktop
-        @media only screen and (min-width: const.$tablet) {
-            font-size: 32px;
-            margin-top: 32px;
-        }
-    }
+    // justify-content: center;
 }
 
 .title-page-top {
     display: flex;
     flex-direction: column;
+    gap: 14px;
 
     // mobile
     align-items: center;
+    justify-content: center;
     margin-left: 71px;
     margin-right: 71px;
     min-height: 75vh;
 
-    // desktop
-    @media only screen and (min-width: const.$tablet) {
-        // margin-left: 200px;
+    & h4 {
+        text-align: center;
     }
 
     // tablet & desktop
     @media only screen and (min-width: const.$mobile) {
         align-items: start;
-        justify-content: center;
+        & h4 {
+            text-align: start;
+        }
     }
+
+    // desktop
+	@media only screen and (min-width: const.$tablet) {
+        // width: 100%;
+        width: calc(100% - 142px);
+	}
 }
 
 .accent {
@@ -81,8 +47,12 @@
 
 .contact-button {
     cursor: pointer;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: white;
     background-color: const.$red;
+    margin: 30px 0;
 
 	border: 1px solid transparent;
     border-radius: 16px;
@@ -90,22 +60,13 @@
     // mobile
     width: 175px;
     padding: 13px 15px;
-    margin-top: 10px;
-    margin-bottom: 80px;
-    font-size: 24px;
 
     // tablet
 	@media only screen and (min-width: const.$mobile) {
         width: 200px;
         padding: 16px 18px;
-        font-size: 27px;
-        // margin: 52px 73px 150px 73px;
 	}
 
-    // desktop
-    @media only screen and (min-width: const.$tablet) {
-        // margin: 40px 200px 110px 200px;
-    }
 }
 
 .bottom-scroll {
@@ -117,8 +78,12 @@
     min-height: 130px;
     background-color: const.$grey;
 
+    & svg {
+        height: 30px;
+    }
+
     // tablet & desktop
 	@media only screen and (min-width: const.$mobile) {
-        min-height: 200px;
+        min-height: 150px;
 	}
 }

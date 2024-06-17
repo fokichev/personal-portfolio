@@ -1,11 +1,19 @@
 @use 'constants' as const;
 
 #root {
-	width: 100%
+	width: 100%;
 	/* max-width: 1280px; */
 	/* margin: 0 auto; */
 	/* padding: 2rem; */
 	/* text-align: center; */
+
+	// mobile & tablet
+	font-size: 16px;
+
+	// desktop
+	@media only screen and (min-width: const.$tablet) {
+		font-size: 18px;
+	}
 }
 
 .app {
@@ -36,12 +44,47 @@
 	background-size: cover;
 }
 
-h2 {
-	font-weight: 400;
-	font-size: 35px;
+.red-text {
+	color: const.$red;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 42px;
+
+	// tablet
+	@media only screen and (min-width: const.$mobile) {
+		font-size: 94px;
+	}
 
 	// desktop
 	@media only screen and (min-width: const.$tablet) {
-		font-size: 51px;
+		font-size: 84px;
 	}
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 34px;
+
+	// desktop
+	@media only screen and (min-width: const.$tablet) {
+		font-size: 50px;
+	}
+}
+
+h3 {
+
+}
+
+h4 {
+	font-weight: 300;
+	font-size: 20px;
+	// tablet
+
+	// desktop
+	@media only screen and (min-width: const.$tablet) {
+		font-size: 26px;
+	}
+
 }

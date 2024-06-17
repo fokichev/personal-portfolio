@@ -29,13 +29,13 @@ const ContactMePage = (props: ContactMePageProps) => {
                     <div className="contaxt-me-links">
                         <div className="contact-me-link-row">
                             <FontAwesomeIcon icon={["fab", "linkedin"]} className="icon"/>
-                            <a href="https://linkedin.com/in/polina-fokicheva">
-                                linkedin.com/in/polina-fokicheva
+                            <a href="https://linkedin.com/in/fokichev">
+                                linkedin.com/in/fokichev
                             </a>
                         </div>
                         <div className="contact-me-svg-row">
                             <a href={upWorkLink}><UpWorkSVG /></a>
-                            <a href={fiverrLink}><FiverrSVG /></a>
+                            {/* <a href={fiverrLink}><FiverrSVG /></a> */}
                         </div>
                     </div>
                 </div>

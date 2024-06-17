@@ -31,18 +31,18 @@ $side-margin: 34px;
 }
 
 .experience-text {
-    font-size: 16px;
+    // font-size: 16px;
 
     margin: 10px 20px 0 20px;
 
     // tablet
     @media only screen and (min-width: const.$mobile) and (max-width: const.$tablet) {
-        font-size: 20px;
+        // font-size: 20px;
     }
 
     // desktop
     @media only screen and (min-width: const.$tablet) {
-        font-size: 22px;
+        // font-size: 22px;
     }
 
     // tablet & desktop

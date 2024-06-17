@@ -1,0 +1,29 @@
+@use 'constants' as const;
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    margin: 62px;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    // tablet & desktop
+	@media only screen and (min-width: const.$mobile) {
+        max-width: 60%;
+	}
+}
+
+.skill-pill {
+    background-color: const.$red;
+    padding: 10px 22px;
+    border-radius: 26px;
+}
