@@ -21,6 +21,21 @@
     margin-right: 71px;
     min-height: 75vh;
 
+    h1 {
+        margin-top: 180px;
+        margin-bottom: 0px;
+
+        // tablet
+        @media only screen and (min-width: const.$mobile) {
+            margin-top: 300px;
+        }
+    
+        // desktop
+        @media only screen and (min-width: const.$tablet) {
+            margin-top: 150px;
+        }
+    }
+
     & h4 {
         text-align: center;
     }
