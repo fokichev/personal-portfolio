@@ -3,8 +3,6 @@ import "../styles/ServicesPage.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconName } from "@fortawesome/fontawesome-svg-core";
 
-
-
 const SERVICE_MAP = [
     {
         key: "full_stack_development",

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AboutMePhoto from "../assets/images/about-me-photo.png";
 import AboutMePhotoColor from "../assets/images/about-me-photo-color.png";
 import { ReactComponent as UpWorkSVG } from "../assets/icons/upwork.svg";
-import { ReactComponent as FiverrSVG } from "../assets/icons/fiverr.svg";
+// import { ReactComponent as FiverrSVG } from "../assets/icons/fiverr.svg";
 
 import { IconPrefix, IconName } from "@fortawesome/fontawesome-svg-core";
 import { LinksType, OrientationType } from "../types";
@@ -91,7 +91,7 @@ const TextSection = () => {
 }
 
 const DetailsSection = ({ links }: { links: LinksType }) => {
-    const { upWorkLink, fiverrLink } = links;
+    const { upWorkLink } = links;
 
     return (
         <div className="about-me-bottom">

@@ -2,12 +2,12 @@ import "../styles/ContactMePage.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { ReactComponent as UpWorkSVG } from "../assets/icons/upwork.svg";
-import { ReactComponent as FiverrSVG } from "../assets/icons/fiverr.svg";
+// import { ReactComponent as FiverrSVG } from "../assets/icons/fiverr.svg";
 
 import { LinksType } from "../types";
 
 const ContactMePage = (props: ContactMePageProps) => {
-    const { upWorkLink, fiverrLink } = props.links;
+    const { upWorkLink } = props.links;
 
     const onSubmit = (event: any) => {
         event.preventDefault();
